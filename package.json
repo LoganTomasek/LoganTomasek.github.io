@@ -10,6 +10,7 @@
     "preview": "http-server dist -p 3000 -o"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "http-server": "^14.1.1"
   }
 }
