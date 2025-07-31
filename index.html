@@ -1,13 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logan Tomasek Portfolio Website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span class="logo-text">Logan Tomasek</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('experience')" class="nav-link">Experience</button>
+                    <button onclick="scrollToSection('certifications')" class="nav-link">Certifications</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
+                    <button onclick="scrollToSection('socials')" class="nav-link">Socials</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile hidden">
+                <button onclick="scrollToSection('about')" class="nav-link-mobile">About</button>
+                <button onclick="scrollToSection('experience')" class="nav-link-mobile">Experience</button>
+                <button onclick="scrollToSection('certifications')" class="nav-link-mobile">Certifications</button>
+                <button onclick="scrollToSection('projects')" class="nav-link-mobile">Projects</button>
+                <button onclick="scrollToSection('socials')" class="nav-link-mobile">Socials</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero/About Section -->
+    <section id="about" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="/Log.jpg" alt="Logan Tomasek" class="profile-image">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Logan Tomasek</h1>
+                    <h2 class="hero-subtitle">Cybersecurity Professional | SOC Analyst Candidate</h2>
+                    <div class="hero-description">
+                        <p>I'm a passionate cybersecurity professional with a strong focus on blue team operations and threat detection. I enjoy participating in Capture the Flag competitions and am actively seeking a SOC analyst role where I can apply my skills in threat detection and incident response.</p>
+                        <p>While I have experience in penetration testing, my primary expertise lies in defensive security operations. I'm currently certified with CompTIA Security+ and am pursuing additional certifications including BTL1 while considering returning to school to further advance my cybersecurity knowledge.</p>
+                        <p>In my spare time, I explore hardware security with my Flipper Zero, constantly learning about its capabilities and applications in security research.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-description">Hands-on experience and practical skills developed through various cybersecurity activities.</p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3 class="card-title">Capture The Flag Competitions</h3>
+                    <p class="card-description">Active participant in CTF competitions, developing practical skills in vulnerability assessment, reverse engineering, and security analysis.</p>
+                    <div class="tags">
+                        <span class="tag">Web Security</span>
+                        <span class="tag">Cryptography</span>
+                        <span class="tag">Forensics</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 class="card-title">Blue Team Operations</h3>
+                    <p class="card-description">Specialized focus on defensive security operations, threat detection, and incident response methodologies with hands-on experience in security monitoring.</p>
+                    <div class="tags">
+                        <span class="tag">Threat Detection</span>
+                        <span class="tag">SIEM</span>
+                        <span class="tag">Incident Response</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 class="card-title">Penetration Testing</h3>
+                    <p class="card-description">Experience in penetration testing methodologies and vulnerability assessment, providing a comprehensive understanding of both offensive and defensive security.</p>
+                    <div class="tags">
+                        <span class="tag">Vulnerability Assessment</span>
+                        <span class="tag">Network Security</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 class="card-title">Hardware Security Research</h3>
+                    <p class="card-description">Exploring hardware security concepts and radio frequency analysis using Flipper Zero, expanding knowledge in IoT and embedded device security.</p>
+                    <div class="tags">
+                        <span class="tag">RF Analysis</span>
+                        <span class="tag">IoT Security</span>
+                        <span class="tag">Hardware Hacking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                </svg>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-description">Professional certifications and ongoing education in cybersecurity.</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-card certified">
+                    <div class="cert-header">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                        </svg>
+                        <div class="cert-info">
+                            <h3 class="cert-title">CompTIA Security+</h3>
+                            <p class="cert-status certified-status">Certified</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Industry-standard certification covering essential cybersecurity principles, risk management, and security technologies.</p>
+                </div>
+                
+                <div class="certification-card certified">
+                    <div class="cert-header">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                        </svg>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Google SIEM Fundamentals</h3>
+                            <p class="cert-status certified-status">Certified</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Comprehensive training in Security Information and Event Management (SIEM) systems, log analysis, and security monitoring fundamentals.</p>
+                </div>
+                
+                <div class="certification-card in-progress">
+                    <div class="cert-header">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                        </svg>
+                        <div class="cert-info">
+                            <h3 class="cert-title">BTL1 (Blue Team Level 1)</h3>
+                            <p class="cert-status progress-status">In Progress</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Advanced blue team certification focusing on defensive security operations, threat hunting, and incident response capabilities.</p>
+                </div>
+            </div>
+            
+            <div class="continuing-education">
+                <div class="education-card">
+                    <h3 class="education-title">Continuing Education</h3>
+                    <p class="education-description">Currently exploring opportunities to return to school for advanced cybersecurity education and pursuing additional industry certifications to enhance my expertise in SOC operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16,18 22,12 16,6"/>
+                    <polyline points="8,6 2,12 8,18"/>
+                </svg>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-description">Personal projects and research initiatives in cybersecurity and technology.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3 class="project-title">Home Lab Infrastructure</h3>
+                    <p class="project-description">Designed and implemented two comprehensive home lab environments (Windows/Mac) with integrated firewall solutions and multi-layered encryption protocols.</p>
+                    <div class="tags">
+                        <span class="tag">Network Security</span>
+                        <span class="tag">Encryption</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16,18 22,12 16,6"/>
+                        <polyline points="8,6 2,12 8,18"/>
+                    </svg>
+                    <h3 class="project-title">SIEM & Security Analytics</h3>
+                    <p class="project-description">Implemented and configured Splunk and Wazuh SIEM solutions for security monitoring, log analysis, and threat detection in enterprise environments.</p>
+                    <div class="tags">
+                        <span class="tag">Splunk</span>
+                        <span class="tag">Wazuh</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <h3 class="project-title">Penetration Testing & CTF</h3>
+                    <p class="project-description">Completed multiple HackTheBox challenges and CTF competitions. Conducted penetration testing assessment for gaming server infrastructure.</p>
+                    <div class="tags">
+                        <span class="tag">HackTheBox</span>
+                        <span class="tag">Penetration Testing</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3 class="project-title">Surveillance System Development</h3>
+                    <p class="project-description">Contributed to the development and startup of an advanced surveillance camera system featuring FaceID technology with automated reporting to local authorities.</p>
+                    <div class="tags">
+                        <span class="tag">FaceID</span>
+                        <span class="tag">Surveillance</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16,18 22,12 16,6"/>
+                        <polyline points="8,6 2,12 8,18"/>
+                    </svg>
+                    <h3 class="project-title">Blue Team Operations</h3>
+                    <p class="project-description">Specialized in defensive security operations including log analysis, incident response automation, policy compliance, and comprehensive vulnerability management.</p>
+                    <div class="tags">
+                        <span class="tag">Log Analysis</span>
+                        <span class="tag">Incident Response</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <h3 class="project-title">Hardware Security Research</h3>
+                    <p class="project-description">Ongoing research and experimentation with Flipper Zero capabilities, exploring RF protocols, hardware security, and IoT device analysis.</p>
+                    <div class="tags">
+                        <span class="tag">Flipper Zero</span>
+                        <span class="tag">RF Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials" class="socials-section">
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15,3 21,3 21,9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <h2 class="section-title">Connect With Me</h2>
+                <p class="section-description">Find me on professional networks and explore my projects and contributions.</p>
+            </div>
+            
+            <div class="socials-grid">
+                <a href="https://www.linkedin.com/in/logan-tomasek-02165b2a4/" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon-wrapper">
+                        <svg class="social-icon linkedin" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <h3 class="social-title">LinkedIn</h3>
+                    <p class="social-description">Connect with me professionally and view my career journey in cybersecurity.</p>
+                </a>
+                
+                <a href="https://github.com/LoganTomasek" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon-wrapper">
+                        <svg class="social-icon github" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </div>
+                    <h3 class="social-title">GitHub</h3>
+                    <p class="social-description">Explore my code repositories, projects, and contributions to the cybersecurity community.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span class="footer-text">Logan Tomasek</span>
+                </div>
+                <p class="footer-description">Cybersecurity Professional | Seeking SOC Analyst Opportunities</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
