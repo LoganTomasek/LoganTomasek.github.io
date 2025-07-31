@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, User, Briefcase, Award, Code, Menu, X, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Shield, User, Award, Code, Menu, X, Linkedin, Github, ExternalLink } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -33,15 +33,6 @@ function App() {
                 onMouseLeave={(e) => e.target.style.color = '#4A5568'}
               >
                 About
-              </button>
-              <button 
-                onClick={() => scrollToSection('work')}
-                className="transition-colors"
-                style={{ color: '#4A5568' }}
-                onMouseEnter={(e) => e.target.style.color = '#2D3748'}
-                onMouseLeave={(e) => e.target.style.color = '#4A5568'}
-              >
-                Work
               </button>
               <button 
                 onClick={() => scrollToSection('experience')}
@@ -102,15 +93,6 @@ function App() {
                   onMouseLeave={(e) => e.target.style.color = '#4A5568'}
                 >
                   About
-                </button>
-                <button 
-                  onClick={() => scrollToSection('work')}
-                  className="transition-colors text-left"
-                  style={{ color: '#4A5568' }}
-                  onMouseEnter={(e) => e.target.style.color = '#2D3748'}
-                  onMouseLeave={(e) => e.target.style.color = '#4A5568'}
-                >
-                  Work
                 </button>
                 <button 
                   onClick={() => scrollToSection('experience')}
@@ -193,30 +175,6 @@ function App() {
                   about its capabilities and applications in security research.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Work Section */}
-      <section id="work" className="py-16" style={{ backgroundColor: '#4A5568' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Briefcase className="w-12 h-12 mx-auto mb-4 text-white" />
-            <h2 className="text-3xl font-bold mb-4 text-white">Work</h2>
-            <p className="max-w-2xl mx-auto text-gray-300">
-              Professional experience and career highlights in cybersecurity and related fields.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-sm p-8">
-            <div className="text-center py-12">
-              <Shield className="w-16 h-16 mx-auto mb-4" style={{ color: '#2D3748' }} />
-              <h3 className="text-xl font-semibold mb-2" style={{ color: '#2D3748' }}>Seeking SOC Analyst Position</h3>
-              <p style={{ color: '#4A5568' }}>
-                Currently looking for opportunities to apply my cybersecurity skills in a SOC environment, 
-                focusing on threat detection, incident response, and security monitoring.
-              </p>
             </div>
           </div>
         </div>
