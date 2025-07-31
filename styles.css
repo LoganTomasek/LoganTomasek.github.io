@@ -181,7 +181,11 @@ body {
 /* Experience Section */
 .experience-section {
     background-color: #2D3748;
-    padding: 4rem 0;
+    padding: 2rem 0;
+}
+
+.experience-section:first-of-type {
+    padding: 4rem 0 2rem 0;
 }
 
 .experience-grid {
@@ -230,8 +234,13 @@ body {
 
 /* Certifications Section */
 .certifications-section {
+    background-color: #2D3748;
+    padding: 2rem 0;
+}
+
+.certifications-section:first-of-type {
     background-color: #4A5568;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .certifications-grid {
@@ -327,8 +336,13 @@ body {
 
 /* Projects Section */
 .projects-section {
+    background-color: #4A5568;
+    padding: 2rem 0;
+}
+
+.projects-section:first-of-type {
     background-color: #2D3748;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .projects-grid {
@@ -382,8 +396,13 @@ body {
 
 /* Socials Section */
 .socials-section {
+    background-color: #2D3748;
+    padding: 2rem 0;
+}
+
+.socials-section:first-of-type {
     background-color: #4A5568;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .socials-grid {
